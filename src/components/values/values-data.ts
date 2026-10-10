@@ -10,21 +10,21 @@ export type ValueItem = {
 
 export const VALUES: ValueItem[] = [
   {
-    title: "Missão",
+    title: "O que eu faço",
     description:
       "Criar experiências digitais rápidas, acessíveis e bem construídas, que resolvam problemas reais de pessoas e negócios.",
     icon: Target,
     area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
   },
   {
-    title: "Visão",
+    title: "Onde quero chegar",
     description:
       "Ser referência como desenvolvedor que une performance, design e boas práticas, evoluindo continuamente a cada projeto.",
     icon: Eye,
     area: "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]",
   },
   {
-    title: "Valores",
+    title: "Como eu trabalho",
     description:
       "Código limpo e legível, acessibilidade como requisito, colaboração com o time, aprendizado contínuo e compromisso com cada entrega.",
     icon: Heart,
