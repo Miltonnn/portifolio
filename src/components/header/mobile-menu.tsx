@@ -28,9 +28,17 @@ export function MobileMenu() {
   const handleOpenChangeComplete = (open: boolean) => {
     if (open || !pendingHref.current) return;
 
-    document.querySelector(pendingHref.current)?.scrollIntoView({ behavior: "smooth" });
-    window.history.pushState(null, "", pendingHref.current);
+    const href = pendingHref.current;
+    const section = document.querySelector(href.slice(1));
     pendingHref.current = null;
+
+    if (!section) {
+      window.location.assign(href);
+      return;
+    }
+
+    section.scrollIntoView({ behavior: "smooth" });
+    window.history.pushState(null, "", href);
   };
 
   return (

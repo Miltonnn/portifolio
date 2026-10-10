@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import Link from "next/link";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
 import { Phone } from "lucide-react";
 import { Logo } from "@/components/logo/logo";
@@ -28,13 +29,13 @@ export function Footer() {
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
         <Reveal direction="left" className="flex flex-col items-start gap-5">
-          <a
-            href="#inicio"
+          <Link
+            href="/#inicio"
             aria-label="Milton Andrade, voltar ao início"
             className="rounded-sm text-foreground transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <Logo className="h-10 w-auto" />
-          </a>
+          </Link>
 
           <p className="max-w-sm text-muted-foreground">
             Vamos conversar sobre o seu próximo projeto?

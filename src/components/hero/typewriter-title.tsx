@@ -16,7 +16,7 @@ const GRADIENT_CLASSES =
 function getDelay(
   isFullyTyped: boolean,
   isFullyDeleted: boolean,
-  isDeleting: boolean
+  isDeleting: boolean,
 ) {
   if (isFullyTyped) return HOLD_TYPED_MS;
   if (isFullyDeleted) return HOLD_DELETED_MS;
@@ -39,17 +39,20 @@ export function TypewriterTitle() {
         }
         setCount((current) => current + (isDeleting ? -1 : 1));
       },
-      getDelay(isFullyTyped, isFullyDeleted, isDeleting)
+      getDelay(isFullyTyped, isFullyDeleted, isDeleting),
     );
 
     return () => clearTimeout(timeoutId);
   }, [count, isDeleting]);
 
   const typedFirst = FIRST_WORD.slice(0, count);
-  const typedSecond = SECOND_WORD.slice(0, Math.max(0, count - FIRST_WORD.length));
+  const typedSecond = SECOND_WORD.slice(
+    0,
+    Math.max(0, count - FIRST_WORD.length),
+  );
 
   return (
-    <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+    <h1 className="text-3xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
       <span className="sr-only">
         {FIRST_WORD}
         {SECOND_WORD}

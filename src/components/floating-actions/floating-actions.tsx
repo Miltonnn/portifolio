@@ -1,5 +1,5 @@
 import { SiGithub, SiWhatsapp } from "@icons-pack/react-simple-icons";
-import { FileDown } from "lucide-react";
+import { FileText } from "lucide-react";
 import { WHATSAPP_HREF } from "@/lib/contact";
 import { GRADIENT_BUTTON_CLASSES } from "@/lib/gradient-button";
 import { cn } from "@/lib/utils";
@@ -40,13 +40,14 @@ export function FloatingActions() {
         <SiGithub className="size-5" />
       </a>
       <a
-        href="/curriculo.pdf"
-        download
-        aria-label="Baixar currículo"
-        title="Baixar currículo"
+        href="/assets/pdf/milton-developer.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Abrir currículo em PDF (abre em uma nova aba)"
+        title="Abrir currículo"
         className={DARK_BUTTON_CLASSES}
       >
-        <FileDown className="size-5" aria-hidden="true" />
+        <FileText className="size-5" aria-hidden="true" />
       </a>
       <ScrollTopButton className={FLOATING_BUTTON_CLASSES} />
     </div>

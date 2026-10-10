@@ -1,7 +1,7 @@
 export type Project = {
   title: string;
   description: string;
-  href: string;
+  href?: string;
   image?: string;
 };
 
@@ -28,19 +28,16 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
         title: "Site Institucional 2",
         description:
           "Landing page com animações suaves e formulário integrado para captação de leads.",
-        href: "https://example.com",
       },
       {
         title: "Site Institucional 3",
         description:
           "Site multipáginas com conteúdo gerenciável e otimização para Core Web Vitals.",
-        href: "https://example.com",
       },
       {
         title: "Site Institucional 4",
         description:
           "Página de apresentação de serviços com layout moderno e totalmente acessível.",
-        href: "https://example.com",
       },
     ],
   },
@@ -74,14 +71,13 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
         title: "Integralmédica",
         description:
           "Uma das maiores lojas de suplementos do Brasil, com customizações de tema e melhorias de conversão.",
-        href: "www.integralmedica.com.br",
+        href: "https://www.integralmedica.com.br/",
         image: "/assets/projects/capa-integralmedica.png",
       },
       {
         title: "Casas Pedro",
         description:
           "Loja especializada em alimentos, temperos, grãos e produtos a granel, com foco em ingredientes para culinária. ",
-        href: "https://example.com",
         image: "/assets/projects/capa-casaspedro.png",
       },
     ],
@@ -109,14 +105,12 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
         title: "Site Base",
         description:
           "Um tema base para sites institucionais, com layout moderno, animações suaves e otimização para Core Web Vitals.",
-        href: "https://example.com",
         image: "/assets/projects/capa-sitebase.jpg",
       },
       {
         title: "Projeto Pessoal 4",
         description:
           "Ferramenta utilitária feita para estudar novos padrões de React e TypeScript.",
-        href: "https://example.com",
       },
     ],
   },

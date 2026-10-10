@@ -1,8 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { Project } from "./projects-data";
+
+const PROJECT_PENDING_HREF = "/404";
+
+const PROJECT_LINK_CLASSES = cn(
+  buttonVariants({ variant: "outline" }),
+  "mt-auto h-10 self-start px-4"
+);
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -34,21 +42,26 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.description}
         </p>
 
-        <a
-          href={project.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={cn(
-            buttonVariants({ variant: "outline" }),
-            "mt-auto h-10 self-start px-4"
-          )}
-        >
-          Ver projeto
-          <span className="sr-only">
-            {project.title} (abre em uma nova aba)
-          </span>
-          <ArrowUpRight aria-hidden="true" />
-        </a>
+        {project.href ? (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={PROJECT_LINK_CLASSES}
+          >
+            Ver projeto
+            <span className="sr-only">
+              {project.title} (abre em uma nova aba)
+            </span>
+            <ArrowUpRight aria-hidden="true" />
+          </a>
+        ) : (
+          <Link href={PROJECT_PENDING_HREF} className={PROJECT_LINK_CLASSES}>
+            Ver projeto
+            <span className="sr-only">{project.title}</span>
+            <ArrowUpRight aria-hidden="true" />
+          </Link>
+        )}
       </div>
     </article>
   );
