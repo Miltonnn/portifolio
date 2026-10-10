@@ -106,10 +106,11 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
         image: "/assets/projects/capa-doggy.png",
       },
       {
-        title: "Projeto Pessoal 3",
+        title: "Site Base",
         description:
-          "Dashboard com gráficos, filtros e consumo de API GraphQL.",
+          "Um tema base para sites institucionais, com layout moderno, animações suaves e otimização para Core Web Vitals.",
         href: "https://example.com",
+        image: "/assets/projects/capa-sitebase.jpg",
       },
       {
         title: "Projeto Pessoal 4",

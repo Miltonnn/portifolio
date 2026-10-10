@@ -6,7 +6,7 @@ import type { Project } from "./projects-data";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
+    <article className="group isolate flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
       <div className="relative aspect-video overflow-hidden bg-linear-to-br from-violet-600/40 via-zinc-900 to-sky-500/30">
         {project.image ? (
           <Image
@@ -14,12 +14,12 @@ export function ProjectCard({ project }: { project: Project }) {
             alt={`Página do projeto ${project.title}`}
             fill
             sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 85vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none"
           />
         ) : (
           <span
             aria-hidden="true"
-            className="absolute inset-0 flex items-center justify-center text-5xl font-bold text-white/20"
+            className="absolute inset-0 flex items-center justify-center text-5xl font-bold text-white/20 transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none"
           >
             {project.title.charAt(0)}
           </span>
