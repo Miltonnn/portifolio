@@ -7,12 +7,12 @@ import { ScrollTopButton } from "./scroll-top-button";
 
 const FLOATING_BUTTON_CLASSES = cn(
   GRADIENT_BUTTON_CLASSES,
-  "size-11 rounded-full shadow-md shadow-black/30 hover:opacity-80"
+  "size-11 rounded-full shadow-md shadow-black/30 hover:opacity-80",
 );
 
 const DARK_BUTTON_CLASSES = cn(
   FLOATING_BUTTON_CLASSES,
-  "border border-white/10 bg-zinc-900 bg-none"
+  "border border-white/10 bg-zinc-900 bg-none",
 );
 
 export function FloatingActions() {
@@ -25,13 +25,13 @@ export function FloatingActions() {
         aria-label="Conversar no WhatsApp (abre em uma nova aba)"
         className={cn(
           DARK_BUTTON_CLASSES,
-          "animate-whatsapp-glow motion-reduce:animate-none"
+          "animate-whatsapp-glow motion-reduce:animate-none",
         )}
       >
         <SiWhatsapp className="size-5" color="#25D366" />
       </a>
       <a
-        href="https://github.com"
+        href="https://github.com/Miltonnn"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub (abre em uma nova aba)"

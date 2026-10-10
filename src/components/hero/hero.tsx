@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/ui/reveal";
+import { TypewriterTitle } from "./typewriter-title";
 
 const STACKS = [
   "React.js",
@@ -25,37 +27,40 @@ export function Hero() {
     >
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
         <div className="flex flex-col items-start gap-6">
-          <span className="rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-sm text-violet-300">
-            Milton Andrade
-          </span>
-
-          <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl">
-            Software{" "}
-            <span className="bg-linear-to-r from-violet-400 to-sky-400 bg-clip-text text-transparent">
-              Developer
+          <Reveal direction="left">
+            <span className="rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-sm text-violet-300">
+              Milton Andrade
             </span>
-          </h1>
+          </Reveal>
 
-          <ul
-            aria-label="Tecnologias"
-            className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-zinc-300 sm:text-base"
-          >
-            {STACKS.map((stack) => (
-              <li
-                key={stack}
-                className="flex items-center gap-2 not-first:before:text-violet-400 not-first:before:content-['·']"
-              >
-                {stack}
-              </li>
-            ))}
-          </ul>
+          <Reveal direction="left" delay={0.1}>
+            <TypewriterTitle />
+          </Reveal>
 
-          <p className="max-w-lg text-lg text-pretty text-muted-foreground">
-            Desenvolvo experiências web rápidas, acessíveis e bem pensadas,
-            unindo código limpo com atenção aos detalhes de design.
-          </p>
+          <Reveal direction="left" delay={0.2}>
+            <ul
+              aria-label="Tecnologias"
+              className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-zinc-300 sm:text-base"
+            >
+              {STACKS.map((stack) => (
+                <li
+                  key={stack}
+                  className="flex items-center gap-2 not-first:before:text-violet-400 not-first:before:content-['·']"
+                >
+                  {stack}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
 
-          <div className="flex flex-wrap gap-4">
+          <Reveal direction="left" delay={0.3}>
+            <p className="max-w-lg text-lg text-pretty text-muted-foreground">
+              Desenvolvo experiências web rápidas, acessíveis e bem pensadas,
+              unindo código limpo com atenção aos detalhes de design.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.4} className="flex flex-wrap gap-4">
             <a
               href="#projetos"
               className={cn(
@@ -74,10 +79,14 @@ export function Hero() {
             >
               Entrar em contato
             </a>
-          </div>
+          </Reveal>
         </div>
 
-        <div className="relative mx-auto w-full max-w-sm md:max-w-md">
+        <Reveal
+          direction="right"
+          delay={0.2}
+          className="relative mx-auto w-full max-w-sm md:max-w-md"
+        >
           <div
             aria-hidden="true"
             className="absolute inset-0 -z-10 scale-110 rounded-full bg-radial from-violet-500/30 to-transparent to-70%"
@@ -95,7 +104,7 @@ export function Hero() {
             preload
             className="h-auto w-full"
           />
-        </div>
+        </Reveal>
       </div>
     </section>
   );

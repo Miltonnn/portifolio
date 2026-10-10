@@ -51,6 +51,16 @@
   --animate-whatsapp-glow: whatsapp-glow 2s ease-in-out infinite;
   --animate-light-drift-violet: light-drift-violet 20s ease-in-out infinite;
   --animate-light-drift-sky: light-drift-sky 26s ease-in-out infinite;
+  --animate-caret-blink: caret-blink 1s step-end infinite;
+  @keyframes caret-blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
   @keyframes light-drift-violet {
     0%,
     100% {

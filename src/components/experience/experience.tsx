@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/ui/reveal";
 import { Timeline, type TimelineEntry } from "@/components/ui/timeline";
 import { EXPERIENCES, type ExperienceItem } from "./experience-data";
 
@@ -32,7 +33,11 @@ function ExperienceContent({ item }: { item: ExperienceItem }) {
 
 const TIMELINE_DATA: TimelineEntry[] = EXPERIENCES.map((item) => ({
   title: item.period,
-  content: <ExperienceContent item={item} />,
+  content: (
+    <Reveal direction="right">
+      <ExperienceContent item={item} />
+    </Reveal>
+  ),
 }));
 
 export function Experience() {
@@ -42,7 +47,7 @@ export function Experience() {
       aria-labelledby="experiencia-title"
       className="scroll-mt-20 pt-24"
     >
-      <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center">
+      <Reveal className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center">
         <span className="text-sm font-medium tracking-wider text-violet-400 uppercase">
           Trajetória
         </span>
@@ -52,7 +57,7 @@ export function Experience() {
         >
           Formação e experiência
         </h2>
-      </div>
+      </Reveal>
 
       <Timeline data={TIMELINE_DATA} />
     </section>

@@ -1,6 +1,6 @@
 export const PHONE = {
-  label: "(11) 90000-0000",
-  href: "tel:+5511900000000",
+  label: "(11) 965152919",
+  href: "tel:+5511965152919",
 };
 
-export const WHATSAPP_HREF = "https://wa.me/5511900000000";
+export const WHATSAPP_HREF = "https://wa.me/5511965152919";

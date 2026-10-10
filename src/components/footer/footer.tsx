@@ -2,6 +2,7 @@ import type { ComponentType } from "react";
 import { SiInstagram } from "@icons-pack/react-simple-icons";
 import { Phone } from "lucide-react";
 import { Logo } from "@/components/logo/logo";
+import { Reveal } from "@/components/ui/reveal";
 import { PHONE } from "@/lib/contact";
 import { GRADIENT_BUTTON_CLASSES } from "@/lib/gradient-button";
 import { cn } from "@/lib/utils";
@@ -26,7 +27,7 @@ export function Footer() {
       className="scroll-mt-20 border-t border-white/10 pt-16 pb-28 md:pb-10"
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
-        <div className="flex flex-col items-start gap-5">
+        <Reveal direction="left" className="flex flex-col items-start gap-5">
           <a
             href="#inicio"
             aria-label="Milton Andrade, voltar ao início"
@@ -62,9 +63,9 @@ export function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
-        <div className="flex flex-col gap-4 md:items-end">
+        <Reveal direction="right" delay={0.15} className="flex flex-col gap-4 md:items-end">
           <div className="w-full max-w-md">
             <h2 className="text-lg font-semibold">Newsletter</h2>
             <p className="mt-2 mb-4 text-sm text-muted-foreground">
@@ -72,7 +73,7 @@ export function Footer() {
             </p>
             <NewsletterForm />
           </div>
-        </div>
+        </Reveal>
       </div>
 
       <div className="mx-auto mt-12 max-w-7xl px-6">

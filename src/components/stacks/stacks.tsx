@@ -1,4 +1,5 @@
 import { Marquee } from "@/components/ui/marquee";
+import { Reveal } from "@/components/ui/reveal";
 import { STACKS, type Stack } from "./stacks-data";
 
 const half = Math.ceil(STACKS.length / 2);
@@ -35,23 +36,27 @@ export function Stacks() {
         aria-hidden="true"
         className="mt-0 flex flex-col gap-4 [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]"
       >
-        <Marquee
-          pauseOnHover
-          className="[--duration:40s] motion-reduce:*:animate-none"
-        >
-          {FIRST_ROW.map((stack) => (
-            <StackCard key={stack.name} stack={stack} />
-          ))}
-        </Marquee>
-        <Marquee
-          reverse
-          pauseOnHover
-          className="[--duration:40s] motion-reduce:*:animate-none"
-        >
-          {SECOND_ROW.map((stack) => (
-            <StackCard key={stack.name} stack={stack} />
-          ))}
-        </Marquee>
+        <Reveal direction="left" delay={0.5}>
+          <Marquee
+            pauseOnHover
+            className="[--duration:40s] motion-reduce:*:animate-none"
+          >
+            {FIRST_ROW.map((stack) => (
+              <StackCard key={stack.name} stack={stack} />
+            ))}
+          </Marquee>
+        </Reveal>
+        <Reveal direction="right" delay={0.6}>
+          <Marquee
+            reverse
+            pauseOnHover
+            className="[--duration:40s] motion-reduce:*:animate-none"
+          >
+            {SECOND_ROW.map((stack) => (
+              <StackCard key={stack.name} stack={stack} />
+            ))}
+          </Marquee>
+        </Reveal>
       </div>
     </section>
   );

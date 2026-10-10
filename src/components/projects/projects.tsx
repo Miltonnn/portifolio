@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/ui/reveal";
 import { ProjectCarousel } from "./project-carousel";
 import { PROJECT_CATEGORIES } from "./projects-data";
 
@@ -9,7 +10,7 @@ export function Projects() {
       className="scroll-mt-20 py-24"
     >
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-center text-center">
+        <Reveal className="flex flex-col items-center text-center">
           <span className="text-sm font-medium tracking-wider text-violet-400 uppercase">
             Portfólio
           </span>
@@ -19,11 +20,16 @@ export function Projects() {
           >
             Projetos Desenvolvidos
           </h2>
-        </div>
+        </Reveal>
 
         <div className="mt-16 flex flex-col gap-20">
-          {PROJECT_CATEGORIES.map((category) => (
-            <ProjectCarousel key={category.id} category={category} />
+          {PROJECT_CATEGORIES.map((category, index) => (
+            <Reveal
+              key={category.id}
+              direction={index % 2 === 0 ? "left" : "right"}
+            >
+              <ProjectCarousel category={category} />
+            </Reveal>
           ))}
         </div>
       </div>
