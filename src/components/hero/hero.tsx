@@ -25,10 +25,10 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative isolate flex min-h-[80svh] items-center pt-24 pb-16"
+      className="relative isolate flex min-h-[80svh] pt-24"
     >
-      <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
-        <div className="flex flex-col items-start gap-6">
+      <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 md:grid-cols-2 md:gap-6">
+        <div className="flex flex-col items-start gap-6 self-center md:pb-16">
           <Reveal direction="left">
             <span className="rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-sm text-violet-300">
               Performance, acessibilidade e boas experiências.
@@ -89,24 +89,20 @@ export function Hero() {
         <Reveal
           direction="right"
           delay={0.2}
-          className="relative mx-auto w-full max-w-sm md:max-w-md"
+          className="relative mx-auto w-full max-w-md self-end md:max-w-none"
         >
           <div
             aria-hidden="true"
-            className="absolute inset-0 -z-10 scale-110 rounded-full bg-radial from-violet-500/30 to-transparent to-70%"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 -z-10 rounded-full border border-white/10 bg-linear-to-br from-zinc-800/80 to-zinc-950"
+            className="absolute inset-x-0 top-1/4 bottom-0 -z-10 bg-radial from-violet-500/25 to-transparent to-70% blur-2xl"
           />
           <Image
             src="/img-hero.png"
             alt="Foto de Milton Andrade"
             width={2508}
             height={2508}
-            sizes="(min-width: 768px) 448px, 384px"
+            sizes="(min-width: 1280px) 640px, (min-width: 768px) 50vw, 100vw"
             preload
-            className="h-auto w-full"
+            className="block h-auto w-full [mask-image:linear-gradient(to_bottom,black_65%,transparent)]"
           />
         </Reveal>
       </div>
