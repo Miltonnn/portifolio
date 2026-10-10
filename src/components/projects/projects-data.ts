@@ -90,7 +90,7 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
       {
         title: "Mfinance",
         description:
-          "Este portfólio, feito com Next.js, TypeScript, Tailwind CSS e shadcn/ui.Dashboard de controle financeiro com gráficos interativos e autenticação de usuários.",
+          "Dashboard de controle financeiro com gráficos interativos e autenticação de usuários, aqui você controla todos os seus gastos e receitas de forma simples e intuitiva.",
         href: "https://finance-jota.vercel.app/login",
         image: "/assets/projects/capa-dash.png",
       },

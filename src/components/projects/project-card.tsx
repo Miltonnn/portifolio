@@ -9,8 +9,11 @@ const PROJECT_PENDING_HREF = "/404";
 
 const PROJECT_LINK_CLASSES = cn(
   buttonVariants({ variant: "outline" }),
-  "mt-auto h-10 self-start px-4"
+  "relative isolate mt-auto h-10 self-start overflow-hidden px-4 before:absolute before:inset-0 before:-z-10 before:origin-left before:scale-x-0 before:bg-linear-to-r before:from-violet-600 before:to-violet-400 before:transition-transform before:duration-300 before:ease-out hover:border-violet-500 hover:text-white hover:before:scale-x-100 focus-visible:text-white focus-visible:before:scale-x-100 motion-reduce:before:transition-none"
 );
+
+const PROJECT_ICON_CLASSES =
+  "transition-transform duration-300 ease-out group-hover/button:rotate-45 group-focus-visible/button:rotate-45 motion-reduce:transition-none";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -53,13 +56,13 @@ export function ProjectCard({ project }: { project: Project }) {
             <span className="sr-only">
               {project.title} (abre em uma nova aba)
             </span>
-            <ArrowUpRight aria-hidden="true" />
+            <ArrowUpRight aria-hidden="true" className={PROJECT_ICON_CLASSES} />
           </a>
         ) : (
           <Link href={PROJECT_PENDING_HREF} className={PROJECT_LINK_CLASSES}>
             Ver projeto
             <span className="sr-only">{project.title}</span>
-            <ArrowUpRight aria-hidden="true" />
+            <ArrowUpRight aria-hidden="true" className={PROJECT_ICON_CLASSES} />
           </Link>
         )}
       </div>

@@ -4,3 +4,8 @@ export const PHONE = {
 };
 
 export const WHATSAPP_HREF = "https://wa.me/5511965152919";
+
+export const LOCATION = {
+  city: "São Paulo, SP",
+  detail: "Av. Nordeste, 2780 - São Miguel Paulista",
+};

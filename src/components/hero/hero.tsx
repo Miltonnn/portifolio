@@ -29,7 +29,7 @@ export function Hero() {
         <div className="flex flex-col items-start gap-6">
           <Reveal direction="left">
             <span className="rounded-full border border-violet-500/30 bg-violet-500/10 px-3 py-1 text-sm text-violet-300">
-              Milton Andrade
+              Performance, acessibilidade e boas experiências.
             </span>
           </Reveal>
 
