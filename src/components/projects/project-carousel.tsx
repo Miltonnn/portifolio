@@ -9,6 +9,7 @@ import {
   useCarousel,
 } from "@/components/ui/carousel";
 import { GRADIENT_BUTTON_CLASSES } from "@/lib/gradient-button";
+import { TITLE_UNDERLINE_CLASSES } from "@/lib/title-underline";
 import { cn } from "@/lib/utils";
 import { ProjectCard } from "./project-card";
 import type { ProjectCategory } from "./projects-data";
@@ -92,7 +93,10 @@ export function ProjectCarousel({ category }: { category: ProjectCategory }) {
           </span>
           <h3
             id={titleId}
-            className="text-2xl font-semibold tracking-tight sm:text-3xl"
+            className={cn(
+              TITLE_UNDERLINE_CLASSES,
+              "pb-3 text-2xl font-semibold tracking-tight sm:text-3xl after:left-0 after:h-0.5 after:w-10"
+            )}
           >
             {category.title}
           </h3>

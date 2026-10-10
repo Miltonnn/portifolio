@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowUpLeft } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
-import { GRADIENT_BUTTON_CLASSES } from "@/lib/gradient-button";
+import { HOVER_ARROW_CLASSES, HOVER_FILL_CLASSES } from "@/lib/hover-fill";
 import { cn } from "@/lib/utils";
 
 export default function NotFound() {
@@ -30,9 +31,19 @@ export default function NotFound() {
 
         <Link
           href="/"
-          className={cn(GRADIENT_BUTTON_CLASSES, "mt-2 h-12 gap-2 px-6 text-base")}
+          className={cn(
+            buttonVariants({ variant: "outline", size: "lg" }),
+            HOVER_FILL_CLASSES,
+            "mt-2 h-12 gap-2 px-6 text-base"
+          )}
         >
-          <ArrowLeft className="size-4" aria-hidden="true" />
+          <ArrowUpLeft
+            aria-hidden="true"
+            className={cn(
+              HOVER_ARROW_CLASSES,
+              "group-hover/button:-rotate-45 group-focus-visible/button:-rotate-45"
+            )}
+          />
           Voltar para a home
         </Link>
       </Reveal>

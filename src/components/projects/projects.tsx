@@ -1,4 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
+import { SECTION_TITLE_UNDERLINE_CLASSES } from "@/lib/title-underline";
+import { cn } from "@/lib/utils";
 import { ProjectCarousel } from "./project-carousel";
 import { PROJECT_CATEGORIES } from "./projects-data";
 
@@ -16,7 +18,10 @@ export function Projects() {
           </span>
           <h2
             id="projetos-title"
-            className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-12"
+            className={cn(
+              SECTION_TITLE_UNDERLINE_CLASSES,
+              "mt-4 mb-12 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
+            )}
           >
             Projetos Desenvolvidos
           </h2>

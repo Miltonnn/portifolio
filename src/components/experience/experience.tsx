@@ -1,5 +1,7 @@
 import { Reveal } from "@/components/ui/reveal";
 import { Timeline, type TimelineEntry } from "@/components/ui/timeline";
+import { SECTION_TITLE_UNDERLINE_CLASSES } from "@/lib/title-underline";
+import { cn } from "@/lib/utils";
 import { EXPERIENCES, type ExperienceItem } from "./experience-data";
 
 function ExperienceContent({ item }: { item: ExperienceItem }) {
@@ -53,7 +55,10 @@ export function Experience() {
         </span>
         <h2
           id="experiencia-title"
-          className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
+          className={cn(
+            SECTION_TITLE_UNDERLINE_CLASSES,
+            "mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
+          )}
         >
           Formação e experiência
         </h2>

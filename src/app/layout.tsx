@@ -29,8 +29,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col overflow-x-clip bg-background font-sans text-foreground">
         <Header />
-        {children}
-        <Footer />
+        <div className="flex flex-1 flex-col overflow-x-clip">
+          {children}
+          <Footer />
+        </div>
         <FloatingActions />
       </body>
     </html>

@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { HOVER_ARROW_CLASSES, HOVER_FILL_CLASSES } from "@/lib/hover-fill";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/ui/reveal";
 import { TypewriterTitle } from "./typewriter-title";
@@ -17,7 +19,7 @@ const STACKS = [
   "Shopify",
 ] as const;
 
-const HERO_BUTTON_CLASSES = "h-12 px-6 text-base";
+const HERO_BUTTON_CLASSES = cn(HOVER_FILL_CLASSES, "h-12 gap-2 px-6 text-base");
 
 export function Hero() {
   return (
@@ -69,6 +71,7 @@ export function Hero() {
               )}
             >
               Ver projetos
+              <ArrowUpRight aria-hidden="true" className={HOVER_ARROW_CLASSES} />
             </a>
             <a
               href="#contato"
@@ -78,6 +81,7 @@ export function Hero() {
               )}
             >
               Entrar em contato
+              <ArrowUpRight aria-hidden="true" className={HOVER_ARROW_CLASSES} />
             </a>
           </Reveal>
         </div>

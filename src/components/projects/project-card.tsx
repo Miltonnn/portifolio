@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
+import { HOVER_ARROW_CLASSES, HOVER_FILL_CLASSES } from "@/lib/hover-fill";
 import { cn } from "@/lib/utils";
 import type { Project } from "./projects-data";
 
@@ -9,11 +10,9 @@ const PROJECT_PENDING_HREF = "/404";
 
 const PROJECT_LINK_CLASSES = cn(
   buttonVariants({ variant: "outline" }),
-  "relative isolate mt-auto h-10 self-start overflow-hidden px-4 before:absolute before:inset-0 before:-z-10 before:origin-left before:scale-x-0 before:bg-linear-to-r before:from-violet-600 before:to-violet-400 before:transition-transform before:duration-300 before:ease-out hover:border-violet-500 hover:text-white hover:before:scale-x-100 focus-visible:text-white focus-visible:before:scale-x-100 motion-reduce:before:transition-none"
+  HOVER_FILL_CLASSES,
+  "mt-auto h-10 self-start px-4"
 );
-
-const PROJECT_ICON_CLASSES =
-  "transition-transform duration-300 ease-out group-hover/button:rotate-45 group-focus-visible/button:rotate-45 motion-reduce:transition-none";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -56,13 +55,13 @@ export function ProjectCard({ project }: { project: Project }) {
             <span className="sr-only">
               {project.title} (abre em uma nova aba)
             </span>
-            <ArrowUpRight aria-hidden="true" className={PROJECT_ICON_CLASSES} />
+            <ArrowUpRight aria-hidden="true" className={HOVER_ARROW_CLASSES} />
           </a>
         ) : (
           <Link href={PROJECT_PENDING_HREF} className={PROJECT_LINK_CLASSES}>
             Ver projeto
             <span className="sr-only">{project.title}</span>
-            <ArrowUpRight aria-hidden="true" className={PROJECT_ICON_CLASSES} />
+            <ArrowUpRight aria-hidden="true" className={HOVER_ARROW_CLASSES} />
           </Link>
         )}
       </div>

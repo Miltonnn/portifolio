@@ -6,6 +6,8 @@ import { Brand } from "@/components/logo/brand";
 import { NAV_LINKS } from "@/components/header/nav-links";
 import { Reveal } from "@/components/ui/reveal";
 import { LOCATION, PHONE, WHATSAPP_HREF } from "@/lib/contact";
+import { TITLE_UNDERLINE_CLASSES } from "@/lib/title-underline";
+import { cn } from "@/lib/utils";
 import { LinkedinIcon } from "./linkedin-icon";
 
 type SocialLink = {
@@ -31,7 +33,12 @@ type FooterColumnProps = {
 function FooterColumn({ title, delay, children }: FooterColumnProps) {
   return (
     <Reveal delay={delay} className="flex flex-col gap-5">
-      <h2 className="relative pb-2 text-lg font-semibold after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-8 after:rounded-full after:bg-linear-to-r after:from-violet-600 after:to-violet-400">
+      <h2
+        className={cn(
+          TITLE_UNDERLINE_CLASSES,
+          "pb-2 text-lg font-semibold after:left-0 after:h-0.5 after:w-8"
+        )}
+      >
         {title}
       </h2>
       {children}

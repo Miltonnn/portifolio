@@ -1,5 +1,6 @@
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Reveal } from "@/components/ui/reveal";
+import { SECTION_TITLE_UNDERLINE_CLASSES } from "@/lib/title-underline";
 import { cn } from "@/lib/utils";
 import { VALUES, type ValueItem } from "./values-data";
 
@@ -46,7 +47,10 @@ export function Values() {
           </span>
           <h2
             id="sobre-title"
-            className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
+            className={cn(
+              SECTION_TITLE_UNDERLINE_CLASSES,
+              "mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
+            )}
           >
             O que me move
           </h2>
