@@ -34,6 +34,13 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.title.charAt(0)}
           </span>
         )}
+
+        {project.stack && (
+          <span className="absolute top-3 left-3 z-10 rounded-full border border-violet-500/30 bg-zinc-950/80 px-3 py-1 text-xs font-medium text-violet-300 shadow-md shadow-black/30">
+            <span className="sr-only">Plataforma: </span>
+            {project.stack}
+          </span>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-6">

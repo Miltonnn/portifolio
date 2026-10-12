@@ -19,6 +19,20 @@ export const metadata: Metadata = {
   title: "Milton Andrade | Desenvolvedor Front-end",
   description:
     "Portfólio de Milton Andrade, desenvolvedor front-end focado em interfaces modernas, performáticas e acessíveis.",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Milton Andrade",
+    title: "Milton Andrade | Desenvolvedor Front-end",
+    description:
+      "Front-end especializado em e-commerce com VTEX IO, FastStore e Shopify. Interfaces rápidas, acessíveis e bem construídas.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Milton Andrade | Desenvolvedor Front-end",
+    description:
+      "Front-end especializado em e-commerce com VTEX IO, FastStore e Shopify. Interfaces rápidas, acessíveis e bem construídas.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

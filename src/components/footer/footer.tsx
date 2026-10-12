@@ -1,11 +1,11 @@
 import type { ComponentType, ReactNode } from "react";
 import Link from "next/link";
 import { SiInstagram, SiWhatsapp } from "@icons-pack/react-simple-icons";
-import { MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Brand } from "@/components/logo/brand";
 import { NAV_LINKS } from "@/components/header/nav-links";
 import { Reveal } from "@/components/ui/reveal";
-import { LOCATION, PHONE, WHATSAPP_HREF } from "@/lib/contact";
+import { EMAIL, LOCATION, PHONE, WHATSAPP_HREF } from "@/lib/contact";
 import { TITLE_UNDERLINE_CLASSES } from "@/lib/title-underline";
 import { cn } from "@/lib/utils";
 import { LinkedinIcon } from "./linkedin-icon";
@@ -18,7 +18,11 @@ type SocialLink = {
 
 const SOCIAL_LINKS: SocialLink[] = [
   { label: "Instagram", href: "https://instagram.com", icon: SiInstagram },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: LinkedinIcon },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/milton-andrade-1b0744236/",
+    icon: LinkedinIcon,
+  },
 ];
 
 const LINK_CLASSES =
@@ -36,7 +40,7 @@ function FooterColumn({ title, delay, children }: FooterColumnProps) {
       <h2
         className={cn(
           TITLE_UNDERLINE_CLASSES,
-          "pb-2 text-lg font-semibold after:left-0 after:h-0.5 after:w-8"
+          "pb-2 text-lg font-semibold after:left-0 after:h-0.5 after:w-8",
         )}
       >
         {title}
@@ -83,19 +87,36 @@ export function Footer() {
           </FooterColumn>
 
           <FooterColumn title="Contato" delay={0.15}>
-            <a
-              href={WHATSAPP_HREF}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`WhatsApp ${PHONE.label} (abre em uma nova aba)`}
-              className={LINK_CLASSES}
-            >
-              <SiWhatsapp
-                className="size-4 shrink-0 text-violet-400"
-                aria-hidden="true"
-              />
-              {PHONE.label}
-            </a>
+            <ul className="flex flex-col gap-3">
+              <li>
+                <a
+                  href={WHATSAPP_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`WhatsApp ${PHONE.label} (abre em uma nova aba)`}
+                  className={LINK_CLASSES}
+                >
+                  <SiWhatsapp
+                    className="size-4 shrink-0 text-violet-400"
+                    aria-hidden="true"
+                  />
+                  {PHONE.label}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={EMAIL.href}
+                  aria-label={`Enviar e-mail para ${EMAIL.label}`}
+                  className={cn(LINK_CLASSES, "break-all")}
+                >
+                  <Mail
+                    className="size-4 shrink-0 text-violet-400"
+                    aria-hidden="true"
+                  />
+                  {EMAIL.label}
+                </a>
+              </li>
+            </ul>
           </FooterColumn>
 
           <FooterColumn title="Endereço" delay={0.2}>

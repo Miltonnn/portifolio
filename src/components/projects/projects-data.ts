@@ -1,8 +1,11 @@
+export type ProjectStack = "VTEX IO" | "FastStore" | "Wake" | "Shopify";
+
 export type Project = {
   title: string;
   description: string;
   href?: string;
   image?: string;
+  stack?: ProjectStack;
 };
 
 export type ProjectCategory = {
@@ -23,6 +26,7 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
         description:
           "Empresa Especializada em Recrutamento & Seleção e Desenvolvimento de Lideranças",
         href: "https://www.hummanos.com.br/",
+        image: "/assets/projects/capa-hummanos.png",
       },
       {
         title: "Site Institucional 2",
@@ -52,13 +56,15 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
           "Loja de roupas femininas bastante customizada, com integração com Master Data e melhorias de performance.",
         href: "https://loja.aniemeyer.com.br/",
         image: "/assets/projects/capa-aniemeyer.png",
+        stack: "FastStore",
       },
       {
-        title: "Loja do Gallo",
+        title: "Loja do Galo",
         description:
-          "Loja do time de futebol Gallo, com customizações de tema e melhorias de conversão.",
+          "Loja do time de futebol Galo, com customizações de tema e melhorias de conversão.",
         href: "https://www.lojadogalo.com.br/",
         image: "/assets/projects/capa-lojadogallo.png",
+        stack: "VTEX IO",
       },
       {
         title: "Yogini",
@@ -66,6 +72,15 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
           "A Yogini é a 1ª marca de moda brasileira inspirada no Yoga. 100% produzida no Brasil. ",
         href: "https://www.yogini.com.br/",
         image: "/assets/projects/capa-yogini.png",
+        stack: "VTEX IO",
+      },
+      {
+        title: "Wiler",
+        description:
+          "Maior referência em tecidos para estofados, cortinas e decoração no Brasil.",
+        href: "https://www.wiler.com.br/",
+        image: "/assets/projects/capa-wiler.png",
+        stack: "VTEX IO",
       },
       {
         title: "Integralmédica",
@@ -73,12 +88,14 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
           "Uma das maiores lojas de suplementos do Brasil, com customizações de tema e melhorias de conversão.",
         href: "https://www.integralmedica.com.br/",
         image: "/assets/projects/capa-integralmedica.png",
+        stack: "Shopify",
       },
       {
         title: "Casas Pedro",
         description:
           "Loja especializada em alimentos, temperos, grãos e produtos a granel, com foco em ingredientes para culinária. ",
         image: "/assets/projects/capa-casaspedro.png",
+        stack: "FastStore",
       },
     ],
   },
