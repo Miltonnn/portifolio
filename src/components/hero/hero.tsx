@@ -12,6 +12,7 @@ const STACKS = [
   "TypeScript",
   "Node.js",
   "PostgreSQL",
+  "Prisma",
   "GraphQL",
   "REST APIs",
   "VTEX IO",
@@ -23,10 +24,7 @@ const HERO_BUTTON_CLASSES = cn(HOVER_FILL_CLASSES, "h-12 gap-2 px-6 text-base");
 
 export function Hero() {
   return (
-    <section
-      id="inicio"
-      className="relative isolate flex min-h-[80svh] pt-24"
-    >
+    <section id="inicio" className="relative isolate flex min-h-[80svh] pt-24">
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-6 md:grid-cols-2 md:gap-6">
         <div className="flex flex-col items-start gap-6 self-center md:pb-16">
           <Reveal direction="left">
@@ -39,15 +37,15 @@ export function Hero() {
             <TypewriterTitle />
           </Reveal>
 
-          <Reveal direction="left" delay={0.2}>
+          <Reveal direction="left" delay={0.2} className="overflow-hidden">
             <ul
               aria-label="Tecnologias"
-              className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-zinc-300 sm:text-base"
+              className="-ml-6 flex flex-wrap items-center gap-y-1 text-sm text-zinc-300 sm:text-base"
             >
               {STACKS.map((stack) => (
                 <li
                   key={stack}
-                  className="flex items-center gap-2 not-first:before:text-violet-400 not-first:before:content-['·']"
+                  className="flex items-center before:w-6 before:text-center before:text-violet-400 before:content-['·']"
                 >
                   {stack}
                 </li>
@@ -71,7 +69,10 @@ export function Hero() {
               )}
             >
               Ver projetos
-              <ArrowUpRight aria-hidden="true" className={HOVER_ARROW_CLASSES} />
+              <ArrowUpRight
+                aria-hidden="true"
+                className={HOVER_ARROW_CLASSES}
+              />
             </a>
             <a
               href="#contato"
@@ -81,7 +82,10 @@ export function Hero() {
               )}
             >
               Entrar em contato
-              <ArrowUpRight aria-hidden="true" className={HOVER_ARROW_CLASSES} />
+              <ArrowUpRight
+                aria-hidden="true"
+                className={HOVER_ARROW_CLASSES}
+              />
             </a>
           </Reveal>
         </div>
