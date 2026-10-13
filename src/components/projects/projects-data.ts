@@ -77,6 +77,14 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
         stack: "VTEX IO",
       },
       {
+        title: "Loungerie",
+        description:
+          "Uma marca de moda que acompanha a mulher em diferentes momentos, estilos e ocasiões.",
+        href: "https://www.loungerie.com.br/",
+        image: "/assets/projects/loungerie.png",
+        stack: "FastStore",
+      },
+      {
         title: "Wiler",
         description:
           "Maior referência em tecidos para estofados, cortinas e decoração no Brasil.",
