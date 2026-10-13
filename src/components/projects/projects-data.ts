@@ -24,24 +24,26 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
       {
         title: "Hummanos",
         description:
-          "Empresa Especializada em Recrutamento & Seleção e Desenvolvimento de Lideranças",
+          "Site institucional da Empresa Especializada em Recrutamento & Seleção e Desenvolvimento de Lideranças",
         href: "https://www.hummanos.com.br/",
-        image: "/assets/projects/capa-hummanos.png",
       },
       {
-        title: "Site Institucional 2",
+        title: "Ruah Epis",
         description:
-          "Landing page com animações suaves e formulário integrado para captação de leads.",
+          "Site institucional da Ruah EPI's, no mercado de Equipamentos de Proteção e Segurança Individual (Epi's), desde 2017",
+        href: "https://www.ruahepis.com.br/",
       },
       {
-        title: "Site Institucional 3",
+        title: "Imperium Engenharia",
         description:
-          "Site multipáginas com conteúdo gerenciável e otimização para Core Web Vitals.",
+          "Site institucional de Regularização ambiental para quem não pode parar a operação.",
+        href: "https://imperiumengenharia.com.br/",
       },
       {
-        title: "Site Institucional 4",
+        title: "Udisafe",
         description:
-          "Página de apresentação de serviços com layout moderno e totalmente acessível.",
+          "Site institucional dos Treinamentos de Segurança do Trabalho",
+        href: "https://www.udisafe.com.br/",
       },
     ],
   },
