@@ -11,7 +11,7 @@ const PROJECT_PENDING_HREF = "/404";
 const PROJECT_LINK_CLASSES = cn(
   buttonVariants({ variant: "outline" }),
   HOVER_FILL_CLASSES,
-  "mt-auto h-10 self-start px-4"
+  "mt-auto h-10 self-start px-4",
 );
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -24,7 +24,7 @@ export function ProjectCard({ project }: { project: Project }) {
             alt={`Página do projeto ${project.title}`}
             fill
             sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 85vw"
-            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none"
+            className="object-fill transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none"
           />
         ) : (
           <span
