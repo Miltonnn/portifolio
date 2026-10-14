@@ -65,7 +65,7 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
         description:
           "Loja do time de futebol Galo, com customizações de tema e melhorias de conversão.",
         href: "https://www.lojadogalo.com.br/",
-        image: "/assets/projects/capa-lojadogallo.png",
+        image: "/assets/projects/capa-galo.png",
         stack: "VTEX IO",
       },
       {
