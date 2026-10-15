@@ -126,7 +126,7 @@ export const PROJECT_CATEGORIES: ProjectCategory[] = [
         description:
           "Site institucional da Dra. Amanda Torrigo, fisioterapeuta especializada em saúde da mulher, com informações sobre seus serviços e contato.",
         href: "https://amandatorrigo.vercel.app/",
-        image: "/assets/projects/capa-fisio.png",
+        image: "/assets/projects/capa-fisio-amanda.png",
       },
       {
         title: "DOGGY",
